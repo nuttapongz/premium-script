@@ -81,7 +81,7 @@ fi
 	echo -e " [+] ${color1}40${color3}. ดูบันทึกการติดตั้ง"
 	echo -e " [+] ${color1}41${color3}. อัปเดตเดี๋ยวนี้"
 	echo -e ""
-	echo  "------------ พัฒนาโดย คุณเต้ ทารุมะ (เต้เล็ก) ------------" 
+	echo  "------------ พัฒนาโดย SUPERNET-VPN.COM ------------" 
 	echo -e ""
 	read -p " [+] โปรดใส่ตัวเลือกของเมนู (ตัวเลข): " x
 if test $x -eq 1; then
@@ -182,7 +182,7 @@ passwd
 elif test $x -eq 40; then
 log-install
 elif test $x -eq 41; then
-wget https://dl.dropboxusercontent.com/s/vcd7jdd7i2bg5bd/install-premiumscript.sh -O - -o /dev/null|sh
+wget https://raw.githubusercontent.com/nuttapongz/supernet-vpnz/master/install-premiumscript.sh -O - -o /dev/null|sh
 else
 echo " [+] โปรดใส่ตัวเลขให้ถูกต้อง (ไม่พบตัวเลือกเมนู)"
 exit
