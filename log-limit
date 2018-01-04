@@ -1,17 +1,17 @@
 #!/bin/bash
-echo "----------------------- พัฒนาโดย คุณเต้ ทารุมะ (เต้เล็ก) -----------------------"
+echo "----------------------- พัฒนาโดย SUPERNET-VPN.COM -----------------------"
 echo " "
 echo "===============================================";
 echo " ";
 if [ -e "/root/log-limit.txt" ]; then
-echo "User yang dikick oleh user-limit adalah";
-echo "Waktu - Username - Jumlah Multilogin"
+echo "ผู้ใช้ที่ขีดฆ่าโดยผู้ใช้มีขีด จำกัด";
+echo "เวลา - ชื่อผู้ใช้ - จำนวน"
 echo "-------------------------------------";
 cat /root/log-limit.txt
 else
-echo " Tidak ada user yang melakukan pelanggaran"
-echo " Atau"
-echo " Script user-limit belum dijalankan"
+echo " ไม่มีผู้ใช้รายใดกระทำผิดกฎหมาย "
+echo " หรือ"
+echo " สคริปยังไม่ทำงาน"
 fi
 echo " ";
 echo "===============================================";
