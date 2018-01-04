@@ -1,0 +1,28 @@
+#!/bin/bash
+IP=$(wget -qO- ipv4.icanhazip.com)
+read -p " [+] จำนวนบัญชีจะถูกสร้างขึ้น: " banyakuser
+read -p " [+] ป้อนอายุการใช้งานที่ใช้งานของบัญชี (วัน): " aktif
+today="$(date +"%Y-%m-%d")"
+expire=$(date -d "$aktif days" +"%Y-%m-%d")
+clear
+echo "----------------------- พัฒนาโดย คุณเต้ ทารุมะ (เต้เล็ก) -----------------------"
+echo " [+] รายละเอียดบัญชี"
+echo "----------------------------------"
+echo " [+] Host/IP: $IP"
+echo " [+] Port OpenSSH: 22,143"
+echo " [+] Port Dropbear: 443,110,109"
+echo " [+] Port Squid Proxy: 80,3128,8000,8080"
+echo " [+] OpenVPN Config: http://$IP:81/client.ovpn"
+echo " [+] ใช้งานได้ถึงวันที่: $(date -d "$aktif วัน" +"%d-%m-%Y")"
+  echo "----------------------------------"
+for (( i=1; i <= $banyakuser; i++ ))
+do
+	USER=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`
+	useradd -M -N -s /bin/false -e $expire $USER
+	PASS=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
+	echo $USER:$USER | chpasswd
+	echo "$i. Username และ Password เหมือนกัน: $USER"
+done
+
+  echo "--------------------------------------"
+  echo " "
