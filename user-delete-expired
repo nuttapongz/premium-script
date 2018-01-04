@@ -1,10 +1,10 @@
 #!/bin/bash
 if [ ! -f /usr/local/bin/deleteduser ]; then
-    echo "echo "Script Created By BYVPN.NET"" > /usr/local/bin/deleteduser
+    echo "echo "Script Created By SUPERNET-VPN.COM"" > /usr/local/bin/deleteduser
 	chmod +x /usr/local/bin/deleteduser
 fi
 hariini=`date +%d-%m-%Y`
-echo "----------------------- พัฒนาโดย คุณเต้ ทารุมะ (เต้เล็ก) -----------------------"
+echo "----------------------- พัฒนาโดย SUPERNET-VPN.COM -----------------------"
 echo " "
 echo "--------------------------------------"
 cat /etc/shadow | cut -d: -f1,8 | sed /:$/d > /tmp/expirelist.txt
@@ -26,18 +26,18 @@ for((i=1; i<=$totalaccounts; i++ ))
            username=$username" " 
        done
        bulantahun=`echo $tglexp |awk -F" " '{print $2,$6}'`
-       echo "echo "BYVPN.NET- User : $username Expire Pada Tanggal : $tgl $bulantahun"" >> /usr/local/bin/alluser
+       echo "echo "User : $username วันหมดอายุ : $tgl $bulantahun"" >> /usr/local/bin/alluser
        todaystime=`date +%s`
        if [ $userexpireinseconds -ge $todaystime ] ;
            then
 			:
        else
-       echo "echo "BYVPN.NET- Username : $username sudah expired Pada Tanggal: $tgl $bulantahun dan telah di delete pada tanggal: $hariini "" >> /usr/local/bin/deleteduser
+       echo "echo "Username : $username sudah expired Pada Tanggal: $tgl $bulantahun dan telah di delete pada tanggal: $hariini "" >> /usr/local/bin/deleteduser
 	   echo "Username $username yang expired pada $tgl $bulantahun telah berhasil dihapus dari sistem pada $hariini"
        userdel $username
        fi
 done
 echo " "
-echo "Script telah berhasil dieksekusi"
+echo "สคริปต์ได้รับการดำเนินการเรียบร้อยแล้ว"
 echo "--------------------------------------"
 echo " "
