@@ -1,6 +1,6 @@
 #!/bin/bash
 if [[ $USER != 'root' ]]; then
-	echo "Maaf, Anda harus menjalankan ini sebagai root"
+	echo "กรุณาเข้า root"
 	exit
 fi
 while :
@@ -14,7 +14,7 @@ do
 	echo ""
 	echo -e "\e[031;1m x\e[0m) Exit"
 	echo ""
-	read -p "Masukkan pilihan anda, kemudian tekan tombol ENTER: " option2
+	read -p "ป้อนตัวเลือกจากนั้นกดปุ่ม : " option2
 	case $option2 in
 		1)
 		clear
