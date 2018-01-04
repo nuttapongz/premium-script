@@ -14,7 +14,7 @@ saat_expired=$(($today + $masa_aktif_detik))
 tanggal_expired=$(date -u --date="1970-01-01 $saat_expired sec GMT" +%Y/%m/%d)
 tanggal_expired_display=$(date -u --date="1970-01-01 $saat_expired sec GMT" '+%d %B %Y')
 clear
-echo "กำลังเชื่อมต่ออยู่ byvpn.net..."
+echo "กำลังเชื่อมต่ออยู่ SUPERNET-VPN.COM..."
 sleep 0.4
 echo "การสร้างบัญชี..."
 sleep 0.3
@@ -33,20 +33,15 @@ usermod -e  $tanggal_expired $username
   echo -e "$password\n$password" | passwd $username
   clear
   echo " "
-  echo  "------------ พัฒนาโดย คุณเต้ ทารุมะ (เต้เล็ก) ------------" 
+  echo  "------------ รายละเอียด User & Pass  ------------" 
   echo " "
   echo  " [+]  ไอพี         : $MYIP"
   echo  " [+]  ชื่อผู้ใช้     : $username"
   echo  " [+]  รหัสผ่าน    : $password"
   echo  " [+]  ใช้งานได้   : $masa_aktif วัน"
   echo  " [+]  หมดอายุวันที่ : $tanggal_expired_display"
-  echo  " [+]  OpenVPN    : 1194 "
-  echo  " [+]  PPTPVPN    : 1732"
-  echo  " [+]  OpenSSH    : 22,143"
-  echo  " [+]  DropBear    : 109,110,443"
-  echo  " [+]  SquidProxy   : 80,3128,8000,8080"
-  echo  " [+]  Ovpn          : http://$MYIP:81/client.ovpn "
+  echo  " [+]  Ovpn          : http://$MYIP:/client.ovpn "
   echo " "
-  echo  "------------ พัฒนาโดย คุณเต้ ทารุมะ (เต้เล็ก) ------------" 
+  echo  "------------ WWW.SUPERNET-VPN.COM ------------" 
   echo " "
 fi
