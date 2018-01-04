@@ -1,14 +1,14 @@
 #!/bin/bash
 clear
-echo "Please Wait..."
+echo "รอสักครู่..."
 sleep 0.5
-echo "Generating Account..."
+echo "กำลังสร้าง Account..."
 sleep 0.5
-echo "Generating Host..."
+echo "กำลังร้าง Host..."
 sleep 0.5
-echo "Generating Username..."
+echo "กำลังสร้าง Username..."
 sleep 0.5
-echo "Generating Password..."
+echo "กำลังสร้าง Password..."
 sleep 1
 MYIP=$(wget -qO- ipv4.icanhazip.com)
 passrandom=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 8 | head -n 1)
@@ -20,10 +20,10 @@ if [ $? -eq 0 ]; then
   echo -e "$passrandom\n$passrandom" | passwd $username
   clear
   echo " "
-  echo "----------------------- พัฒนาโดย คุณเต้ ทารุมะ (เต้เล็ก) -----------------------"
+  echo "----------------------- พัฒนาโดย SUPERNET-VPN.COM -----------------------"
   echo " "
   echo " "
-  echo "Demikian Detail Account Trial Anda"
+  echo "รายละเอียดบัญชีทดลองใช้ของคุณ"
   echo "------------------------------"
   echo "   Host     : $MYIP" 
   echo "   Username : $username"
@@ -39,10 +39,10 @@ else
   echo -e "$passrandom\n$passrandom" | passwd $username
   clear
   echo " "
-  echo "----------------------- พัฒนาโดย คุณเต้ ทารุมะ (เต้เล็ก) -----------------------"
+  echo "----------------------- พัฒนาโดย SUPERNET-VPN.COM -----------------------"
   echo " "
   echo " "
-  echo "Demikian Detail Account Trial Anda"
+  echo "รายละเอียดบัญชีทดลองใช้ของคุณ"
   echo "------------------------------"
   echo "   Host     : $MYIP"
   echo "   Username : $username"
