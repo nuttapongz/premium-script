@@ -28,7 +28,7 @@ fi
 rm -f /root/squidport
 
 if [[ "$OS" = 'debian' ]]; then
-	read -p "Masukkan port Squid yang dipisahkan dengan 'spasi': " port
+	read -p "กรุณาใส่ Port Squid : " port
 	squidport="$(cat /etc/squid3/squid.conf | grep -i http_port | awk '{print $2}')"
 	echo ""
 	echo -e "\e[34;1mPort Squid sebelum diedit:\e[0m"
