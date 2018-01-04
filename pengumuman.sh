@@ -1,4 +1,4 @@
 #!/bin/bash
-# Created by Tae.TaRuMa
-curl Tae.TaRuMa/index.html
+# Created by SUPERNET
+curl SUPERNET-VPN.COM/index.html
 echo ""
