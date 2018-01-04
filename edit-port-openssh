@@ -21,7 +21,7 @@ rm -f /tmp/opensshport
 
 if [[ "$OS" = 'debian' ]]; then
 	cd
-	read -p "Masukkan port OpenSSH yang dipisahkan dengan 'spasi': " port
+	read -p "กรุณาใส่ Port OpenSSH : " port
 	opensshport="$(netstat -ntlp | grep -i ssh | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 
 	#Display & Delete Old OpenSSH Port
