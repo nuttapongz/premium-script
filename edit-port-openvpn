@@ -28,7 +28,7 @@ fi
 rm -f /root/openvpnport
 
 if [[ "$OS" = 'debian' ]]; then
-	read -p "Masukkan port OpenVPN yang diinginkan: " port
+	read -p "กรุณาใส่ Port OpenVPN : " port
 
 	openvpnport="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 	echo ""
